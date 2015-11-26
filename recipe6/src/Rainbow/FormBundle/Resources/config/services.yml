@@ -1,0 +1,5 @@
+services:
+    rainbow_form_type_extension:
+        class: Rainbow\FormBundle\Form\Extension\HtmlTextTypeExtension
+        tags:
+            - { name: form.type_extension, alias: text }

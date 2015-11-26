@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+
+{# Make blocks from the table layout available for usage in this template #}
+{% use 'form_table_layout.html.twig' %}
+
+{% block body %}
+    <h1>Recipe 8</h1>
+
+    {# When looking for form blocks for the `recipe8form`, look in this template file first #}
+    {% form_theme recipe8form _self %}
+
+    {{ form(recipe8form) }}
+
+{% endblock %}
+
+{# Since we USE the table layout, we can use parent() to decorate the block #}
+{% block form_widget_simple %}
+    WIDGET [
+        {{ parent() }}
+    ]
+{% endblock %}
+
+{# Since we USE the table layout, we can use parent() to decorate the block #}
+{% block choice_widget %}
+    WIDGET [
+        {{ parent() }}
+    ]
+{% endblock %}

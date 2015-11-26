@@ -1,0 +1,12 @@
+services:
+    captcha_type:
+        class: Rainbow\FormBundle\Form\CaptchaType
+        arguments: [ "@session" ]
+        tags:
+            - { name: form.type, alias: captcha }
+
+    captcha_type_extension:
+        class: Rainbow\FormBundle\Form\Extension\CaptchaFormTypeExtension
+        arguments: [ "@session" ]
+        tags:
+            - { name: form.type_extension, alias: form }

@@ -1,0 +1,33 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1>Recipe 1</h1>
+
+    {% form_theme recipe1form 'form_table_layout.html.twig' %}
+
+    {{ form(recipe1form) }}
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var same = $('#order_same');
+            var shipping = $('#order_shipping');
+
+            if (same.is(':checked')) {
+                shipping.hide();
+            }
+
+            same.click(function (e) {
+                if (same.is(':checked')) {
+                    shipping.hide();
+                } else {
+                    shipping.show();
+                }
+            });
+
+        });
+    </script>
+{% endblock %}

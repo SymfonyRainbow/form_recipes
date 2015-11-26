@@ -1,0 +1,23 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1>Recipe 8</h1>
+
+    {# When looking for form blocks for the `recipe8form`, look in this template file
+       SECOND, and in `extra.html.twig` FIRST (so reversed order!). #}
+    {% form_theme recipe8form with [ _self, 'RainbowFormBundle:Recipe8:extra.html.twig' ] %}
+
+    {{ form(recipe8form) }}
+{% endblock %}
+
+{# Displayed when displaying a form widget like a text input field. Will not be used, as this
+   block is overriden by the block with the same name in `extra.html.twig` #}
+{% block form_widget_simple %}
+    THIRD SIMPLE WIDGET
+{% endblock %}
+
+{# Displayed when displaying a choice widget like a drop down select box #}
+{% block choice_widget %}
+    THIRD CHOICE WIDGET
+{% endblock %}
+

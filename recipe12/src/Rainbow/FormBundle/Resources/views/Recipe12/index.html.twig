@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1>Recipe 12</h1>
+
+    {% form_theme recipe12form 'form_table_layout.html.twig' %}
+
+    {{ form(recipe12form) }}
+{% endblock %}

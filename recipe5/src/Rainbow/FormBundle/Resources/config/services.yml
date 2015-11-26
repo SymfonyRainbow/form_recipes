@@ -1,0 +1,5 @@
+services:
+    daterange.form.type:
+        class: Rainbow\FormBundle\Form\DateRangeType
+        tags:
+          - { name: form.type, alias: daterange }

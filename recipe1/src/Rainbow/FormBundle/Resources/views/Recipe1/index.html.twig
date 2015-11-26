@@ -1,0 +1,22 @@
+{% extends "::base.html.twig" %}
+
+{% block size_widget %}
+    <div {{ block('widget_container_attributes') }}>
+        {{ form_widget(form.size) }}
+        {% if form.suffix is defined %}
+            {{ form_widget(form.suffix) }}
+        {% endif %}
+    </div>
+{% endblock %}
+
+
+
+{% block body %}
+    <h1>Recipe 1</h1>
+
+    {% form_theme recipe1form with [ _self, 'form_table_layout.html.twig' ] %}
+
+    {{ form(recipe1form) }}
+
+{% endblock %}
+

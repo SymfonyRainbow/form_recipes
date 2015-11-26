@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1>Recipe 8</h1>
+
+    {# When looking for form blocks for the `recipe8form`, look in this template file first #}
+    {% form_theme recipe8form _self %}
+
+    {{ form(recipe8form) }}
+
+{% endblock %}
+
+{# Make the 'form_widget' block available from the table layout available for usage
+   in this template under the alias "base_text_widget". Note that there is no text_widget
+   block in the table layout, so it will automatically use the form_widget instead. #}
+{% use 'form_table_layout.html.twig' with form_widget as base_text_widget %}
+
+{% block text_widget %}
+    WIDGET [ {{ block('base_text_widget') }} ]
+{% endblock %}

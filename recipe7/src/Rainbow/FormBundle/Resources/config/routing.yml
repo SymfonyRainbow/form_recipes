@@ -1,0 +1,3 @@
+rainbow_form_recipe7:
+    path:     /recipe7
+    defaults: { _controller: RainbowFormBundle:Recipe7:index }

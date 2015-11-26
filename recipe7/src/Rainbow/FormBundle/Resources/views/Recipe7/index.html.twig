@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1>Recipe 7</h1>
+
+    {% form_theme recipe7form1 'form_table_layout.html.twig' %}
+    {#
+      Note that we can use different form themes for both forms now.
+    {% form_theme recipe7form2 'form_table_layout.html.twig' %}
+    #}
+
+    <h2>Form 1</h2>
+    {{ form(recipe7form1) }}
+
+    <h2>Form 2</h2>
+    {{ form(recipe7form2) }}
+{% endblock %}
